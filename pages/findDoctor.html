@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Overview</title>
+	<link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="stylesheet" href="../css/aside.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../css/findDoc.css">
+	<script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+	<script src="../js/humanModel.js"></script>
+
+</head>
+
+<body>
+	<div class="app">
+		<aside class="sidebar">
+			<div class="brand">
+				<div class="logo">C<span>X</span></div>
+			</div>
+			<nav class="side-nav">
+				<a href="./dashboard.html">
+					<button class="nav-btn" title="Dashboard"><i class="bi bi-postcard-heart-fill"></i></button>
+				</a>
+				<a href="./overview.html">
+					<button class="nav-btn" title="Records"><i class="bi bi-heart-pulse"></i></button>
+				</a>
+				<a href="./findDoctor.html">
+					<button class="nav-btn active" title="Doctor"><i class="bi bi-journal-medical"></i></button>
+				</a>
+				<a href="./massages.html">
+					<button class="nav-btn" title="Messages"><i class="bi bi-chat-heart"></i></button>
+				</a>
+				<a href="./CharGPT.html">
+					<button class="nav-btn" title="OpenAi"><i class="bi bi-openai"></i></button>
+				</a>
+				<a href="./settings.html">
+					<button class="nav-btn" title="Settings"><i class="bi bi-gear-wide-connected"></i></button>
+				</a>
+			</nav>
+			<div class="profile">
+				<img src="https://i.pravatar.cc/150?img=12" alt="user" />
+			</div>
+		</aside>
+		<main class="main">
+			<header class="topbar">
+				<div>
+					<h1 class="fade-in">Search Doctor</h1>
+				</div>
+				<div class="notif fade-in">
+					<div class="search">
+						<i class="bi bi-search"></i>
+						<input type="search" placeholder="Search..." />
+					</div>
+					<div class="bill">
+						<i class="bi bi-bell"></i>
+					</div>
+				</div>
+			</header>
+
+			<section class="dashboard">
+
+
+				<div class="left-col">
+					<div class="card fade-in">
+						<div class="card-title-side">
+							<h2 class="section-title fade-in">Категории</h2>
+							<div class="arrows fade-in">
+								<button class="arrow left">&#8592;</button>
+								<button class="arrow right">&#8594;</button>
+							</div>
+						</div>
+						<div class="categories fade-in">
+							<div class="category fade-in">
+								<div class="category-icon fade-in"><img src="../icons/icon1.png" alt=""></div>
+								<div class="category-name">Терапевт</div>
+							</div>
+							<div class="category fade-in">
+								<div class="category-icon fade-in"><img src="../icons/icon2.png" alt=""></div>
+								<div class="category-name">Невролог</div>
+							</div>
+							<div class="category fade-in">
+								<div class="category-icon fade-in"><img src="../icons/icon3.png" alt=""></div>
+								<div class="category-name">Нейрохирург</div>
+							</div>
+							<div class="category fade-in">
+								<div class="category-icon fade-in"><img src="../icons/icon4.png" alt=""></div>
+								<div class="category-name">Офтальмолог</div>
+							</div>
+							<div class="category fade-in">
+								<div class="category-icon fade-in"><img src="../icons/icon5.png" alt=""></div>
+								<div class="category-name">Сурдолог</div>
+							</div>
+							<div class="category fade-in">
+								<div class="category-icon fade-in"><img src="../icons/icon6.png" alt=""></div>
+								<div class="category-name">Педиатр</div>
+							</div>
+						</div>
+					</div>
+					<div class="card card-d">
+						<div class="card-title-side fade-in">
+							<h2 class="section-title ">Рекомендуемые врачи</h2>
+							<div style="padding: 10px; margin-bottom:20px;		border-radius: 100px;background: var(--hover-color);
+							cursor:pointer
+"><i class="bi bi-search"></i></div>
+
+						</div>
+						<div class="doctors-list ">
+							<!-- Doctor 1 -->
+							<div class="doctor-card fade-in">
+								<div class="doctor-info">
+									<div class="doctor-name fade-in">Dr. Nyomski MD</div>
+									<div class="doctor-specialty fade-in">
+										<span>Psychology Specialist</span>
+										<div class="rating">5.0</div>
+									</div>
+									<div class="price">$13 - $30</div>
+									<div class="btn-appoint fade-in">Make Appointment</div>
+								</div>
+								<div class="status online ">Online</div>
+								<div class="half-circle"></div>
+								<img class="fade-in" src="../images/doc3.png" alt="">
+							</div>
+
+							<!-- Doctor 2 -->
+							<div class="doctor-card fade-in">
+								<div class="doctor-info">
+									<div class="doctor-name fade-in">Dr. Billy MD</div>
+									<div class="doctor-specialty fade-in">
+										<span>Skin Specialist</span>
+										<div class="rating">4.8</div>
+									</div>
+									<div class="price">$20 - $55</div>
+									<div class="btn-appoint fade-in">Make Appointment</div>
+								</div>
+								<div class="status offline ">Offline</div>
+								<div class="half-circle"></div>
+								<img class="fade-in" src="../images/doc2.png" alt="">
+
+							</div>
+
+							<!-- Doctor 3 -->
+							<div class="doctor-card fade-in">
+								<div class="doctor-info">
+									<div class="doctor-name fade-in">Dr. Raka MD</div>
+									<div class="doctor-specialty fade-in">
+										<span>Heart Specialist</span>
+										<div class="rating">4.9</div>
+									</div>
+									<div class="price">$25 - $60</div>
+									<div class="btn-appoint fade-in">Make Appointment</div>
+								</div>
+								<div class="status online ">Online</div>
+								<div class="half-circle"></div>
+								<img class="fade-in" src="../images/doctor1.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<aside class="right-col">
+					<div class="human-card">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.785548428904!2d69.27973731542172!3d41.31115897927273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4cba0e4c6c1%3A0x76d8e0a65b1a19f!2sTashkent!5e0!3m2!1sen!2suz!4v1730999999999"
+							width="100%" height="100%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+						<div class="model-info">Drag to rotate • Scroll to zoom</div>
+						<!-- red dots -->
+						<span class="dot dot-1" title="Chest"></span>
+						<span class="dot dot-2" title="Abdomen"></span>
+						<span class="dot dot-3" title="Knee"></span>
+						<div class="mini-search">
+							<div class="search">
+								<i class="bi bi-search"></i>
+								<input type="search" placeholder="Search..." />
+							</div>
+						</div>
+					</div>
+				</aside>
+
+
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

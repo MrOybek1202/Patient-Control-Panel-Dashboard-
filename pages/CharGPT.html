@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/aside.css">
+	<link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="stylesheet" href="../css/ChatGPT.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+	<script defer src="../js/humanModel.js"></script>
+	<script defer src="../js/chatGpt.js"></script>
+
+</head>
+
+<body>
+	<div class="app">
+		<aside class="sidebar">
+			<div class="brand">
+				<div class="logo">C<span>X</span></div>
+			</div>
+			<nav class="side-nav">
+				<a href="./dashboard.html">
+					<button class="nav-btn" title="Dashboard"><i class="bi bi-postcard-heart-fill"></i></button>
+				</a>
+				<a href="./overview.html">
+					<button class="nav-btn" title="Records"><i class="bi bi-heart-pulse"></i></button>
+				</a>
+				<a href="./findDoctor.html">
+					<button class="nav-btn" title="Doctor"><i class="bi bi-journal-medical"></i></button>
+				</a>
+				<a href="./massages.html">
+					<button class="nav-btn" title="Messages"><i class="bi bi-chat-heart"></i></button>
+				</a>
+				<a href="./CharGPT.html">
+					<button class="nav-btn active" title="OpenAi"><i class="bi bi-openai"></i></button>
+				</a>
+				<a href="./settings.html">
+					<button class="nav-btn" title="Settings"><i class="bi bi-gear-wide-connected"></i></button>
+				</a>
+			</nav>
+			<div class="profile">
+				<img src="https://i.pravatar.cc/150?img=12" alt="user" />
+			</div>
+		</aside>
+		<main class="main">
+			<header class="topbar fade-in">
+				<div>
+					<h1>Good Morning, Oybek</h1>
+					<p class="sub">You're doing great! Keep up the good work.</p>
+				</div>
+				<div class="notif">
+					<div class="search">
+						<i class="bi bi-search"></i>
+						<input type="search" placeholder="Search..." />
+					</div>
+					<div class="bill">
+						<i class="bi bi-bell"></i>
+					</div>
+				</div>
+			</header>
+
+			<section class="container">
+				<div class="recently-quetions-panel">
+					<div class="search-bar">
+						<input type="text" placeholder="Search" />
+					</div>
+
+					<h3 class="section-title fade-in">Recent</h3>
+					<div class="suggestions-container-res">
+						<div class="suggestion-card-res fade-in">
+							<h3>Анализы крови и расшифровка...</h3>
+						</div>
+						<div class="suggestion-card-res fade-in">
+							<h3>Побочные эффекты лекарств...</h3>
+						</div>
+					</div>
+
+					<h3 class="section-title fade-in">Favorites</h3>
+					<div class="suggestions-container-res">
+						<div class="suggestion-card-res fade-in">
+							<h3>Консультация терапевта</h3>
+						</div>
+						<div class="suggestion-card-res fade-in">
+							<h3>Симптомы и диагностика</h3>
+						</div>
+						<div class="suggestion-card-res fade-in">
+							<h3>Питание и диеты</h3>
+						</div>
+						<div class="suggestion-card-res fade-in">
+							<h3>Реабилитация и восстановление</h3>
+						</div>
+					</div>
+
+					<div class="new-chat-btn  fade-in">New Chat</div>
+				</div>
+
+				<div class="chat-gpt-panel">
+					<div class="header fade-in">
+						<h1>Медицинский Помощник</h1>
+						<p>Задайте вопрос о вашем здоровье</p>
+					</div>
+
+					<!-- Секция с недавними запросами -->
+
+
+					<!-- Секция с предложенными вопросами -->
+					<div class="section">
+
+						<div class="suggestions-container">
+							<div class="suggestion-card fade-in" onclick="insertQuestion(this)">
+								<h3>Восстановление после операции</h3>
+								<p>Советы по реабилитации и уходу за раной</p>
+							</div>
+							<div class="suggestion-card fade-in" onclick="insertQuestion(this)">
+								<h3>Детские прививки</h3>
+								<p>График вакцинации и подготовка к прививкам</p>
+							</div>
+							<div class="suggestion-card fade-in" onclick="insertQuestion(this)">
+								<h3>Мигрень и головная боль</h3>
+								<p>Причины, профилактика и методы облегчения</p>
+							</div>
+							<div class="suggestion-card fade-in" onclick="insertQuestion(this)">
+								<h3>Стресс и тревога</h3>
+								<p>Техники управления стрессом и когда нужна помощь специалиста</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Поле ввода -->
+					<div class="input-container">
+
+						<div class="message-input fade-in">
+							<textarea class="chat-input " placeholder="Задайте ваш медицинский вопрос..." rows="1"
+								oninput="autoResize(this)"></textarea>
+							<input type="file" id="fileInput" style="display:none" />
+							<button id="attachBtn"><i class="bi bi-paperclip"></i></button>
+							<button id="sendBtn"><i class="bi bi-send"></i></button>
+						</div>
+						<div class="input-note ">Медицинский помощник предоставляет информационную поддержку. Для точной
+							диагностики
+							обратитесь к врачу.</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

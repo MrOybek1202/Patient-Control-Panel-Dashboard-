@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Overview</title>
+	<link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="stylesheet" href="../css/aside.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../css/massages.css">
+	<script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+	<script src="../js/massage.js"></script>
+
+</head>
+
+
+<body>
+	<div class="app">
+		<aside class="sidebar">
+			<div class="brand">
+				<div class="logo">C<span>X</span></div>
+			</div>
+			<nav class="side-nav">
+				<a href="./dashboard.html">
+					<button class="nav-btn" title="Dashboard"><i class="bi bi-postcard-heart-fill"></i></button>
+				</a>
+				<a href="./overview.html">
+					<button class="nav-btn" title="Records"><i class="bi bi-heart-pulse"></i></button>
+				</a>
+				<a href="./findDoctor.html">
+					<button class="nav-btn" title="Doctor"><i class="bi bi-journal-medical"></i></button>
+				</a>
+				<a href="./massages.html">
+					<button class="nav-btn active" title="Messages"><i class="bi bi-chat-heart"></i></button>
+				</a>
+				<a href="./CharGPT.html">
+					<button class="nav-btn" title="OpenAi"><i class="bi bi-openai"></i></button>
+				</a>
+				<a href="./settings.html">
+					<button class="nav-btn" title="Settings"><i class="bi bi-gear-wide-connected"></i></button>
+				</a>
+			</nav>
+			<div class="profile">
+				<img src="https://i.pravatar.cc/150?img=12" alt="user" />
+			</div>
+		</aside>
+		<main class="main fade-in">
+			<header class="topbar">
+				<div>
+					<h1>Massages</h1>
+				</div>
+				<div class="notif">
+					<div class="addMassage fade-in">
+						<i class="bi bi-plus-lg"></i>
+						New Massage
+					</div>
+					<div class="bill">
+						<i class="bi bi-bell"></i>
+					</div>
+				</div>
+			</header>
+
+			<div class="container">
+				<!-- Left Panel and Message List -->
+				<div class="message-list-panel">
+					<div class="panel-header">
+						<div class="card-title-side">
+							<h1>Messages List</h1>
+							<div style="padding: 10px; margin-bottom:20px; border-radius: 100px;background: var(--hover-color);
+							cursor:pointer"><i class="bi bi-search"></i></div>
+						</div>
+						<div class="filter-tabs">
+							<div class="filter-tab active">All</div>
+							<div class="filter-tab">Appointment</div>
+							<div class="filter-tab">Lab Result</div>
+						</div>
+					</div>
+
+
+					<!-- Doctors List -->
+
+					<div class="message-list">
+
+						<div class="message-item">
+							<div class="massage-item-left">
+								<div class="message-avatar fade-in">
+									<img src="../images/doctor1.png" alt="Jacob Jones">
+									<span class="status-dot online"></span>
+								</div>
+								<div class="message-info fade-in">
+									<div class="message-sender">Jacob Jones</div>
+									<div class="message-subject">Poll Dermatology</div>
+								</div>
+							</div>
+							<div class="massage-item-right">
+								<div class="message-time">09:35</div>
+							</div>
+						</div>
+
+						<div class="message-item active">
+							<div class="massage-item-left">
+								<div class="message-avatar fade-in">
+									<img src="../images/doctor2.png" alt="Jacob Jones">
+									<span class="status-dot offline"></span>
+								</div>
+								<div class="message-info fade-in">
+									<div class="message-sender">Jenny Wilson</div>
+									<div class="message-subject">Poll Cardiology</div>
+								</div>
+							</div>
+							<div class="massage-item-right">
+								<div class="message-time">08:36</div>
+							</div>
+						</div>
+					</div>
+					<!-- Schedule -->
+					<div class="schedule-list fade-in">
+						<div class="calendar-header fade-in">
+							<div class="calendar-nav fade-in">
+								<button class="nav-button"><i class="bi bi-chevron-left"></i></button>
+								<button class="nav-button"><i class="bi bi-chevron-right"></i></button>
+							</div>
+							<div class="current-month fade-in">Ноябрь 2025</div>
+							<div class="calendar-nav fade-in">
+								<button class="nav-button"><i class="bi bi-calendar-week"></i></button>
+							</div>
+						</div>
+
+						<div class="calendar-grid">
+							<div class="week-days">
+								<div>Пн</div>
+								<div>Вт</div>
+								<div>Ср</div>
+								<div>Чт</div>
+								<div>Пт</div>
+								<div>Сб</div>
+								<div>Вс</div>
+							</div>
+
+							<div class="calendar-days" id="calendarDays">
+								<!-- JavaScriptdan keladi oy junlari -->
+							</div>
+						</div>
+
+						<div class="appointment-list">
+							<h3>Today's Appointments</h3>
+							<div class="appointment-item">
+								<div class="appointment-time">10:00 AM</div>
+								<div class="appointment-desc">Консультация с доктором Ивановым</div>
+							</div>
+							<div class="appointment-item">
+								<div class="appointment-time">2:30 PM</div>
+								<div class="appointment-desc">Анализы крови в лаборатории</div>
+							</div>
+							<div class="appointment-item">
+								<div class="appointment-time">4:15 PM</div>
+								<div class="appointment-desc">Физиотерапия - сеанс 5</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Middle Panel - Conversation -->
+				<div class="conversation-panel fade-in">
+					<div class="conversation-header">
+						<div class="message-avatar fade-in">
+							<img src="../images/doctor2.png" alt="Jenny Wilson">
+							<span class="status-dot offline"></span>
+						</div>
+						<div class="sender-info">
+							<div class="message-sender">Jenny Wilson</div>
+							<div class="message-subject">Poll Cardiology</div>
+						</div>
+					</div>
+
+					<div class="conversation" id="conversation">
+						<div class="message received fade-in">
+							<div class="message-text">
+								Hello, Jacob! Could you please provide your test reference number?
+							</div>
+							<div class="message-time-small">09:35</div>
+						</div>
+
+						<div class="message sent fade-in">
+
+							<div class="message-text">
+								Sure, it was on November 15th, reference number (#12345).
+							</div>
+							<div class="message-time-small">09:36</div>
+						</div>
+					</div>
+
+					<!-- Input area -->
+					<div class="message-input">
+						<input type="text" id="messageInput" placeholder="Type your message..." />
+						<input type="file" id="fileInput" style="display:none" />
+						<button id="attachBtn"><i class="bi bi-paperclip"></i></button>
+						<button id="videoCallBtn"><i class="bi bi-camera-video"></i></button>
+						<button id="sendBtn"><i class="bi bi-send"></i></button>
+					</div>
+
+				</div>
+				<!-- Appointment Section -->
+				<div class="appointment-section fade-in">
+					<div class="appointment-header">
+						<h2 class="appointment-title">Appointment Schedule</h2>
+						<div class="appointment-filters">
+							<select class="filter-select" id="dateFilter">
+								<option>Today</option>
+								<option>Tomorrow</option>
+								<option>This Week</option>
+								<option>Next Week</option>
+							</select>
+							<select class="filter-select" id="typeFilter">
+								<option>All Types</option>
+								<option>Consultation</option>
+								<option>Analysis</option>
+								<option>Surgery</option>
+								<option>Therapy</option>
+								<option>Online</option>
+							</select>
+							<select class="filter-select" id="statusFilter">
+								<option>All Status</option>
+								<option>Upcoming</option>
+								<option>Urgent</option>
+								<option>Completed</option>
+							</select>
+							<button class="filter-btn">
+								<i class="bi bi-funnel"></i> Filter
+							</button>
+						</div>
+					</div>
+
+					<div class="schedule-container">
+						<div class="time-column">
+							<div class="time-slot">7 AM</div>
+							<div class="time-slot">8 AM</div>
+							<div class="time-slot">9 AM</div>
+							<div class="time-slot current">10 AM</div>
+							<div class="time-slot">11 AM</div>
+							<div class="time-slot">12 PM</div>
+							<div class="time-slot">1 PM</div>
+							<div class="time-slot">2 PM</div>
+							<div class="time-slot">3 PM</div>
+							<div class="time-slot">4 PM</div>
+							<div class="time-slot">5 PM</div>
+							<div class="time-slot">6 PM</div>
+						</div>
+
+						<div class="events-column">
+							<div class="event analysis" style="top: 80px; height: 70px;">
+								<div class="event-title">
+									<i class="bi bi-droplet"></i>
+									Анализы крови
+									<span class="status-badge status-upcoming">Запланировано</span>
+								</div>
+								<div class="event-details">
+									<span class="event-time">8:00 - 8:30 AM</span>
+									<span class="event-location">Лаборатория №1</span>
+								</div>
+								<div class="event-note">Натощак, не принимать лекарства</div>
+							</div>
+						</div>
+					</div>
+					<!-- Timezone -->
+					<div class="timezone">
+						Timezone (GMT+3)
+					</div>
+
+					<div class="legend">
+						<div class="legend-item">
+							<div class="legend-color" style="background-color: #4dabf7;"></div>
+							<span>Консультации</span>
+						</div>
+						<div class="legend-item">
+							<div class="legend-color" style="background-color: #69db7c;"></div>
+							<span>Анализы</span>
+						</div>
+						<div class="legend-item">
+							<div class="legend-color" style="background-color: #ffa94d;"></div>
+							<span>Хирургия</span>
+						</div>
+						<div class="legend-item">
+							<div class="legend-color" style="background-color: #ff8787;"></div>
+							<span>Терапия</span>
+						</div>
+						<div class="legend-item">
+							<div class="legend-color" style="background-color: #cc5de8;"></div>
+							<span>Осмотры</span>
+						</div>
+						<div class="legend-item">
+							<div class="legend-color" style="background-color: #74c0fc;"></div>
+							<span>Онлайн</span>
+						</div>
+					</div>
+				</div>
+				<!-- Lab Results Section -->
+				<div class="lab-result-section fade-in">
+
+					<div class="lab-header">
+						<h2 class="lab-title">Laboratory Results</h2>
+						<div class="lab-filters">
+							<select class="filter-select" id="timeFilter">
+								<option>Last 30 days</option>
+								<option>Last 3 months</option>
+								<option>Last 6 months</option>
+								<option>Last year</option>
+							</select>
+							<select class="filter-select" id="testTypeFilter">
+								<option>All Tests</option>
+								<option>Blood Tests</option>
+								<option>Urine Tests</option>
+								<option>Hormone Tests</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="panel-wrap">
+						<div class="panel-scroll">
+							<div class="lab-results-grid">
+								<!-- Critical Result -->
+								<div class="lab-card critical">
+									<div class="lab-card-header">
+										<h3 class="lab-test-name">Complete Blood Count (CBC)</h3>
+										<span class="lab-status status-critical">Critical</span>
+									</div>
+									<div class="lab-details">
+										<div class="lab-info">
+											<div class="lab-value">15.2</div>
+											<div class="lab-range">Reference: 4.5 - 11.0 x10³/μL</div>
+											<div class="lab-trend trend-up">
+												<i class="bi bi-arrow-up"></i>
+												Increased from last test
+											</div>
+											<div class="progress-container">
+												<div class="progress-bar progress-critical" style="width: 85%"></div>
+											</div>
+										</div>
+										<div class="lab-parameters">
+											<div class="parameter">
+												<span class="parameter-name">WBC</span>
+												<span class="parameter-value value-critical">15.2 x10³/μL</span>
+											</div>
+											<div class="parameter">
+												<span class="parameter-name">RBC</span>
+												<span class="parameter-value value-normal">4.8 x10⁶/μL</span>
+											</div>
+											<div class="parameter">
+												<span class="parameter-name">Hemoglobin</span>
+												<span class="parameter-value value-warning">13.2 g/dL</span>
+											</div>
+											<div class="parameter">
+												<span class="parameter-name">Platelets</span>
+												<span class="parameter-value value-normal">250 x10³/μL</span>
+											</div>
+										</div>
+									</div>
+									<div class="lab-details">
+										<div class="detail-item">
+											<i class="bi bi-calendar"></i>
+											<span>Collected: Dec 2, 2024</span>
+										</div>
+										<div class="detail-item">
+											<i class="bi bi-clock"></i>
+											<span>Reported: Dec 3, 2024</span>
+										</div>
+										<div class="detail-item">
+											<i class="bi bi-hospital"></i>
+											<span>Lab: Central Medical Lab</span>
+										</div>
+										<div class="detail-item">
+											<i class="bi bi-person"></i>
+											<span>Dr. Wilson</span>
+										</div>
+									</div>
+									<div class="lab-actions">
+										<button class="lab-btn btn-download">
+											<i class="bi bi-download"></i> Download PDF
+										</button>
+										<button class="lab-btn btn-share">
+											<i class="bi bi-share"></i> Share
+										</button>
+										<button class="lab-btn btn-discuss">
+											<i class="bi bi-chat"></i> Discuss with Doctor
+										</button>
+									</div>
+								</div>
+
+								<!-- Warning Result -->
+								<div class="lab-card warning">
+									<div class="lab-card-header">
+										<h3 class="lab-test-name">Lipid Panel</h3>
+										<span class="lab-status status-warning">Warning</span>
+									</div>
+									<div class="lab-details">
+										<div class="lab-info">
+											<div class="lab-value">245</div>
+											<div class="lab-range">Reference: < 200 mg/dL</div>
+													<div class="lab-trend trend-stable">
+														<i class="bi bi-dash"></i>
+														No significant change
+													</div>
+													<div class="progress-container">
+														<div class="progress-bar progress-warning" style="width: 70%"></div>
+													</div>
+											</div>
+											<div class="lab-parameters">
+												<div class="parameter">
+													<span class="parameter-name">Total Cholesterol</span>
+													<span class="parameter-value value-warning">245 mg/dL</span>
+												</div>
+												<div class="parameter">
+													<span class="parameter-name">LDL</span>
+													<span class="parameter-value value-warning">160 mg/dL</span>
+												</div>
+												<div class="parameter">
+													<span class="parameter-name">HDL</span>
+													<span class="parameter-value value-normal">45 mg/dL</span>
+												</div>
+												<div class="parameter">
+													<span class="parameter-name">Triglycerides</span>
+													<span class="parameter-value value-normal">150 mg/dL</span>
+												</div>
+											</div>
+										</div>
+										<div class="lab-details">
+											<div class="detail-item">
+												<i class="bi bi-calendar"></i>
+												<span>Collected: Nov 28, 2024</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-clock"></i>
+												<span>Reported: Nov 29, 2024</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-hospital"></i>
+												<span>Lab: Central Medical Lab</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-person"></i>
+												<span>Dr. Brown</span>
+											</div>
+										</div>
+										<div class="lab-actions">
+											<button class="lab-btn btn-download">
+												<i class="bi bi-download"></i> Download PDF
+											</button>
+											<button class="lab-btn btn-share">
+												<i class="bi bi-share"></i> Share
+											</button>
+											<button class="lab-btn btn-discuss">
+												<i class="bi bi-chat"></i> Discuss with Doctor
+											</button>
+										</div>
+									</div>
+
+									<!-- Normal Result -->
+									<div class="lab-card normal">
+										<div class="lab-card-header">
+											<h3 class="lab-test-name">Thyroid Function Test</h3>
+											<span class="lab-status status-normal">Normal</span>
+										</div>
+										<div class="lab-details">
+											<div class="lab-info">
+												<div class="lab-value">2.1</div>
+												<div class="lab-range">Reference: 0.4 - 4.0 mIU/L</div>
+												<div class="lab-trend trend-down">
+													<i class="bi bi-arrow-down"></i>
+													Improved from last test
+												</div>
+												<div class="progress-container">
+													<div class="progress-bar progress-normal" style="width: 45%"></div>
+												</div>
+											</div>
+											<div class="lab-parameters">
+												<div class="parameter">
+													<span class="parameter-name">TSH</span>
+													<span class="parameter-value value-normal">2.1 mIU/L</span>
+												</div>
+												<div class="parameter">
+													<span class="parameter-name">Free T4</span>
+													<span class="parameter-value value-normal">1.2 ng/dL</span>
+												</div>
+												<div class="parameter">
+													<span class="parameter-name">T3</span>
+													<span class="parameter-value value-normal">120 ng/dL</span>
+												</div>
+											</div>
+										</div>
+										<div class="lab-details">
+											<div class="detail-item">
+												<i class="bi bi-calendar"></i>
+												<span>Collected: Nov 25, 2024</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-clock"></i>
+												<span>Reported: Nov 26, 2024</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-hospital"></i>
+												<span>Lab: Central Medical Lab</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-person"></i>
+												<span>Dr. Johnson</span>
+											</div>
+										</div>
+										<div class="lab-actions">
+											<button class="lab-btn btn-download">
+												<i class="bi bi-download"></i> Download PDF
+											</button>
+											<button class="lab-btn btn-share">
+												<i class="bi bi-share"></i> Share
+											</button>
+											<button class="lab-btn btn-discuss">
+												<i class="bi bi-chat"></i> Discuss with Doctor
+											</button>
+										</div>
+									</div>
+									<!-- Another lab Cards -->
+									<div class="lab-card normal">
+										<div class="lab-card-header">
+											<h3 class="lab-test-name">Liver Function Test</h3>
+											<span class="lab-status status-normal">Normal</span>
+										</div>
+										<div class="lab-details">
+											<div class="lab-info">
+												<div class="lab-value">25</div>
+												<div class="lab-range">Reference: 0 - 40 U/L</div>
+												<div class="lab-trend trend-stable">
+													<i class="bi bi-dash"></i>
+													Stable
+												</div>
+												<div class="progress-container">
+													<div class="progress-bar progress-normal" style="width: 35%"></div>
+												</div>
+											</div>
+											<div class="lab-parameters">
+												<div class="parameter">
+													<span class="parameter-name">ALT</span>
+													<span class="parameter-value value-normal">25 U/L</span>
+												</div>
+												<div class="parameter">
+													<span class="parameter-name">AST</span>
+													<span class="parameter-value value-normal">28 U/L</span>
+												</div>
+												<div class="parameter">
+													<span class="parameter-name">ALP</span>
+													<span class="parameter-value value-normal">85 U/L</span>
+												</div>
+											</div>
+										</div>
+										<div class="lab-details">
+											<div class="detail-item">
+												<i class="bi bi-calendar"></i>
+												<span>Collected: Nov 20, 2024</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-clock"></i>
+												<span>Reported: Nov 21, 2024</span>
+											</div>
+											<div class="detail-item">
+												<i class="bi bi-hospital"></i>
+												<span>Lab: Central Medical Lab</span>
+											</div>
+										</div>
+										<div class="lab-actions">
+											<button class="lab-btn btn-download">
+												<i class="bi bi-download"></i> Download PDF
+											</button>
+											<button class="lab-btn btn-share">
+												<i class="bi bi-share"></i> Share
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>

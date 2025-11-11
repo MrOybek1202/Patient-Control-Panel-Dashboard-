@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="stylesheet" href="../css/aside.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+	<script src="../js/humanModel.js"></script>
+
+</head>
+
+<body>
+	<div class="app">
+		<!-- Sidebar -->
+		<aside class="sidebar">
+			<div class="brand">
+				<div class="logo">C<span>X</span></div>
+			</div>
+			<nav class="side-nav">
+				<a href="./dashboard.html">
+					<button class="nav-btn active" title="Dashboard"><i class="bi bi-postcard-heart-fill"></i></button>
+				</a>
+				<a href="./overview.html">
+					<button class="nav-btn" title="Records"><i class="bi bi-heart-pulse"></i></button>
+				</a>
+				<a href="./findDoctor.html">
+					<button class="nav-btn" title="Doctor"><i class="bi bi-journal-medical"></i></button>
+				</a>
+				<a href="./massages.html">
+					<button class="nav-btn" title="Messages"><i class="bi bi-chat-heart"></i></button>
+				</a>
+				<a href="./CharGPT.html">
+					<button class="nav-btn" title="OpenAi"><i class="bi bi-openai"></i></button>
+				</a>
+				<a href="./settings.html">
+					<button class="nav-btn" title="Settings"><i class="bi bi-gear-wide-connected"></i></button>
+				</a>
+			</nav>
+			<div class="profile">
+				<img src="https://i.pravatar.cc/150?img=12" alt="user" />
+			</div>
+		</aside>
+		<!-- Main  -->
+		<main class="main">
+			<header class="topbar fade-in">
+				<div>
+					<h1>Good Morning, Oybek</h1>
+					<p class="sub">You're doing great! Keep up the good work.</p>
+				</div>
+				<div class="notif">
+					<div class="search">
+						<i class="bi bi-search"></i>
+						<input type="search" placeholder="Search..." />
+					</div>
+					<div class="bill">
+						<i class="bi bi-bell"></i>
+					</div>
+				</div>
+			</header>
+
+			<section class="dashboard">
+				<!-- Left column with cards -->
+				<div class="left-col">
+					<div class="stats-row">
+						<div class="stat-card fade-in">
+							<div class="card-info">
+								<div class="card-foto fade-in">
+									<img src="../images/eee598d1-5496-48b8-a1b6-f5947b5cb4c4_removalai_preview.png" alt="">
+								</div>
+								<div class="card-text">
+									<div class="stat-title fade-in">Temperature</div>
+									<div class="stat-mini fade-in">102/70</div>
+								</div>
+							</div>
+							<div class="chart-card fade-in">
+								<div class="chart bar-chart">
+									<div class="bar fade-in" style="--h:70%"></div>
+									<div class="bar fade-in" style="--h:40%"></div>
+									<div class="bar fade-in" style="--h:85%"></div>
+									<div class="bar fade-in" style="--h:50%"></div>
+									<div class="bar fade-in" style="--h:60%"></div>
+									<div class="bar fade-in" style="--h:100%"></div>
+								</div>
+								<div class="chart-info fade-in">
+									<div class="stat-value">37.1°</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="stat-card fade-in">
+							<div class="card-info">
+								<div class="card-foto fade-in">
+									<img src="../images//heart2.png" alt="">
+								</div>
+								<div class="card-text">
+									<div class="stat-title fade-in">Yurak Urishi</div>
+									<div class="stat-mini fade-in">124 bpm</div>
+								</div>
+							</div>
+							<div class="chart-card fade-in">
+								<div class="chart bar-chart">
+									<div class="bar fade-in" style="--h:70%"></div>
+									<div class="bar fade-in" style="--h:40%"></div>
+									<div class="bar fade-in" style="--h:85%"></div>
+									<div class="bar fade-in" style="--h:50%"></div>
+									<div class="bar fade-in" style="--h:60%"></div>
+									<div class="bar fade-in" style="--h:100%"></div>
+								</div>
+								<div class="chart-info fade-in">
+									<div class="stat-value">
+										124<span>bpm</span>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="stat-card fade-in">
+							<div class="card-info">
+								<div class="card-foto fade-in">
+									<img src="../images/ce1a0b12-e8e9-41bc-b904-e0ff1864f7f4_removalai_preview.png" alt="">
+								</div>
+								<div class="card-text">
+									<div class="stat-title fade-in">Glucosa</div>
+									<div class="stat-mini fade-in">182/ml</div>
+								</div>
+							</div>
+							<div class="chart-card fade-in">
+								<div class="chart bar-chart">
+									<div class="bar fade-in" style="--h:70%"></div>
+									<div class="bar fade-in" style="--h:40%"></div>
+									<div class="bar fade-in" style="--h:85%"></div>
+									<div class="bar fade-in" style="--h:50%"></div>
+									<div class="bar fade-in" style="--h:60%"></div>
+									<div class="bar fade-in" style="--h:100%"></div>
+								</div>
+								<div class="chart-info fade-in">
+									<div class="stat-value">182<span>/ml</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="body-conditions fade-in">
+						<h2 class="section-title">Body Conditions</h2>
+						<div class="conditions-grid">
+							<div class="cond-card fade-in">
+								<div class="card-info">
+									<div class="card-text">
+										<div class="stat-title fade-in">Food</div>
+										<div class="stat-mini fade-in">253 kcal</div>
+									</div>
+								</div>
+
+								<div class="cond-chart-card">
+									<div class="chart bar-chart">
+										<div class="bar fade-in" style="--h:30%"></div>
+										<div class="bar fade-in" style="--h:45%"></div>
+										<div class="bar fade-in" style="--h:60%"></div>
+										<div class="bar fade-in" style="--h:80%"></div>
+										<div class="bar fade-in" style="--h:50%"></div>
+									</div>
+
+									<div class="chart-info fade-in">
+										<div class="cond-value">
+											253 <small>kcal</small>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+							<div class="cond-card fade-in">
+								<div class="card-info">
+									<div class="card-text">
+										<div class="stat-title fade-in">Food</div>
+										<div class="stat-mini fade-in">253 kg</div>
+									</div>
+								</div>
+
+								<div class="cond-chart-card">
+									<div class="chart bar-chart">
+										<div class="bar fade-in" style="--h:30%"></div>
+										<div class="bar fade-in" style="--h:45%"></div>
+										<div class="bar fade-in" style="--h:60%"></div>
+										<div class="bar fade-in" style="--h:80%"></div>
+										<div class="bar fade-in" style="--h:50%"></div>
+									</div>
+
+									<div class="chart-info fade-in">
+										<div class="cond-value">
+											253 <small>kCal</small>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+							<div class="cond-card fade-in activity">
+								<h4>Activity</h4>
+								<div class="circle-wrap">
+									<div class="circle" style="--p:74">7425</div>
+								</div>
+								<div class="cond-meta">654 steps left</div>
+							</div>
+
+							<div class="cond-card fade-in sleep">
+								<h4>Sleep time</h4>
+								<div class="sleep-bar">
+									<div class="sleep-range" style="width:55%"></div>
+								</div>
+								<div class="cond-meta">6.3h (00:30 - 08:00)</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-relax">
+						<div>
+							<h3>Reset & Relax</h3>
+							<p>Take a moment to unwind and recharge with guided meditation, breathing exercises, and mindfulness tips.
+							</p>
+						</div>
+						<button class="btn">Track my Mood</button>
+					</div>
+				</div>
+
+				<!-- Right column with human figure -->
+				<aside class="right-col">
+					<div class="human-card fade-in">
+						<img style="width: 100%; height:100% " src="../images/body3.png" alt="">
+						<!-- <iframe title="Anatomic Muscle study" frameborder="0" allowfullscreen mozallowfullscreen="true"
+							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+							execution-while-out-of-viewport execution-while-not-rendered web-share
+							src="https://sketchfab.com/models/fad4065844d8403787ea6cf4a2bdb31b/embed"
+							style="width:100%; height:100%; border-radius:12px;">
+						</iframe> -->
+						<div class="model-info">Drag to rotate • Scroll to zoom</div>
+						<!-- red dots -->
+						<span class="dot dot-1" title="Chest"></span>
+						<span class="dot dot-2" title="Abdomen"></span>
+						<span class="dot dot-3" title="Knee"></span>
+						<div class="mini-stat">
+							<div class="mini-icon">❤️</div>
+							<div>
+								<div class="mini-title">Heart Rate</div>
+								<div class="mini-value">124 bpm</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>
